@@ -11,9 +11,10 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* Ph.D in Computer Science, Bar-Ilan University, Israel, 2018
+* M.Sc. in Computer Science, The Open University, Israel, 2010
+* B.A. in Computer Science, The Open University, Israel, 2001
+
 
 Work experience
 ======

@@ -1,0 +1,29 @@
+body {
+  font-family: Helvetica, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+h1 {
+  font-family: Georgia, serif;
+}

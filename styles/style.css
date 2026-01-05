@@ -97,6 +97,15 @@ pre {
   background-color: #005f99;
 }
 
+ul.icon-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.icon-list li {
+  margin-bottom: 0.5em;
+}
+
 /* Responsive design */
 @media (max-width: 600px) {
   nav ul {

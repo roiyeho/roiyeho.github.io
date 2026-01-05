@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Roi Yehoshua</title>
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-96F50L7XYB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-96F50L7XYB');
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Research</h1>
+    <div id="navbar"></div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        My research lies at the intersection of <strong>reinforcement learning</strong>,
+        <strong>multi-agent systems</strong>, and <strong>robotics</strong>, with a growing
+        emphasis on <strong>large language models (LLMs)</strong> and their integration
+        with autonomous and multi-agent systems. I am interested in designing intelligent
+        agents that can reason, coordinate, and act effectively in complex, uncertain,
+        and dynamic environments.
+      </p>
+    </section>
+    
+    <section id="postdoc-research">
+      <h2>Decentralized Multi-Agent Learning for Aerial Search</h2>
+      <p>
+        In my postdoctoral work, I developed a fully decentralized multi-agent learning method based on <strong>policy gradients</strong> for the task of multi-target search and detection by a team of autonomous drones (Yehoshua et al., 2021). In this setting, a group of drones is tasked with locating a set of targets with unknown positions within a designated area. Each drone is equipped with a camera for local sensing and a GPS receiver for approximate localization. Due to limited battery capacity, it is crucial for the team to find all targets as quickly as possible. To succeed, the drones must not only explore efficiently but also learn to <strong>coordinate</strong> their movements and avoid redundant coverage of previously searched areas.
+      </p>
+      <figure style="text-align: center; margin: 1.5em 0;">
+        <img src="images/kri-view.png" alt="Top-down view of the drone cage at Kostas Research Institute, showing green crosses as drones, blue circles as undetected targets, and red circles as detected targets." style="width: 35%; border: 1px solid #ccc; border-radius: 4px;">
+        <figcaption><strong>Figure:</strong> Top view of the drone cage at Kostas Research Institute. Simulated drones are shown as green crosses, undetected targets as blue circles, and detected targets as red circles.</figcaption>
+      </figure>
+      <p>
+        To solve this problem, I collaborated with researchers from the Department of Mechanical and Industrial Engineering to build a realistic drone simulator. The simulator faithfully reproduces the dynamics and noise characteristics of real drones by incorporating statistical models learned from experimental flight data. Using this simulator, we trained our reinforcement learning algorithm, which produced <strong>near-optimal policies</strong> in a short amount of training time. The learned policies enabled the drones to stay within the designated search area while minimizing overlap in their exploration paths. 
+      </p>
+    </section>
+
+    <section id="phd-research">
+      <h2>Adversarial Robotic Coverage</h2>
+      <p>
+        My PhD research addressed a fundamental problem in robotics: the <strong>robotic coverage problem</strong>, where a robot needs to cover every point in a target area. This problem has many real-world applications ranging from house cleaning to demining, agricultural monitoring, and search-and-rescue. 
+      </p>
+      <p> 
+        I extended this classical problem by introducing an <strong>adversarial model</strong>, in which the environment contains threats that can stop the robot, requiring new strategies that explicitly balance efficiency and risk. 
+        This problem requires balancing two conflicting goals: minimizing total coverage time while maximizing the safety of the robot.
+      </p>
+      <figure style="text-align: center;">
+        <img src="images/adversarial-coverage-map.png" alt="Grid map showing areas of different danger levels, with darker magenta indicating more dangerous zones and black cells representing obstacles." style="width: 40%; height: auto; border: 1px solid #ccc; border-radius: 4px;">
+        <figcaption><strong>Figure:</strong> Grid map representation of the environment. Darker shades of magenta represent more dangerous areas, while obstacles are represented by black cells.</figcaption>
+      </figure>
+      <p>
+        I proposed a suite of algorithms for different variations of the adversarial coverage problem: (1) an <strong>offline variant</strong> with a known threat map; (2) an <strong>online version</strong> relying on real-time sensing to detect threats; and (3) a <strong>multi-agent setting</strong> with coordinated teams of robots. These methods were validated both in simulation and on real robotic platforms, and I provided theoretical guarantees on the resulting coverage time and accumulated risk. Additionally, I explored the <em>adversary’s perspective</em>, studying how threats can be strategically placed to prevent coverage—a problem known as <strong>coverage defending</strong>, with applications in surveillance and security.
+      </p>
+      <p>
+        In the process of addressing these challenges, I also developed a novel algorithm for solving Markov Decision Processes, <strong>Frontier-Based Real-Time Dynamic Programming (FB-RTDP)</strong>. This technique significantly improved convergence speed compared to existing solvers, enabling fast and scalable planning under uncertainty. My research was published in top-tier venues including <em>IJRR</em>, <em>JAAMAS</em>, and conferences such as <em>AAMAS</em>, <em>ECAI</em>, and <em>IROS</em>.
+      </p>
+    </section>
+
+    <section id="masters-research">
+      <h2>Effects of Lifetime Learning on Population Fitness</h2>
+      <p>
+        In my Master's thesis, I studied the impact of lifetime learning on evolutionary search processes through the lens of the <strong>Vose dynamical systems model</strong> of genetic algorithms. Classical genetic algorithms are typically analyzed in terms of population-level evolution, but they do not explicitly capture how individual learning within a lifetime affects the long-term behavior of the population. In this work, I extended the traditional Vose model by integrating an additional <em>learning operator</em> that models the effects of lifetime learning—both <strong>Darwinian</strong> and <strong>Lamarckian</strong>—on the population vector. This extension enables a theoretical examination of how individual learning mechanisms influence the expected population fitness over time.
+      </p>
+      <p>
+        The extended framework allowed us to analyze hybrid evolutionary algorithms where learning and genetic variation interact. Using the infinite-population Vose model, we compared the asymptotic behavior of such hybrid strategies to that of the classical Simple Genetic Algorithm (SGA). Our results demonstrated that algorithms incorporating Lamarckian-like inheritance—where learned improvements are directly passed to offspring—can exhibit faster adaptation compared to non-learning baselines. Interestingly, we also observed that Darwinian learning effects can, in some problem instances, lead to more robust convergence toward global optima, highlighting nuanced tradeoffs between learning mechanisms in evolutionary search.
+        Overall, this work provided a rigorous mathematical framework to quantify and reason about the influence of lifetime learning on evolutionary performance. It contributed to the theoretical understanding of hybrid genetic algorithms and offered insights into how individual-level learning can shape population-level fitness over evolutionary timescales. This research was published in the proceedings of the <em>12th Annual Genetic and Evolutionary Computation Conference (GECCO ’10)</em>, a premier venue for evolutionary computation research.
+    </section>
+
+    <section>
+      <h2>Selected Publications</h2>
+      <ul>
+        
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Roi Yehoshua. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/load-navbar.js"></script>
+</body>
+</html>
